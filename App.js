@@ -1,35 +1,13 @@
+// import react packages
 import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-function CameraScreen() {
-    return(
-        <View style={styles.homeScreen}>
-            <Text>
-                Camera
-            </Text>
-        </View>
-    );
-}
-
-function HomeScreen() {
-    return(
-        <View style={styles.homeScreen}>
-            <Text>
-                Home
-            </Text>
-        </View>
-    );
-}
-
-function BookmarkScreen() {
-    return(
-        <View style={styles.homeScreen}>
-            <Text>Bookmarks</Text>
-        </View>
-    );
-}
+// import screens
+import CameraScreen from './app/screens/CameraScreen';
+import HomeScreen from './app/screens/HomeScreen';
+import BookmarkScreen from './app/screens/BookmarkScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -44,16 +22,3 @@ export default function App() {
       </NavigationContainer>
     );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-
-  homeScreen: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-});
